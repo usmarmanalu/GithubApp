@@ -36,7 +36,7 @@ class MainViewModel : ViewModel() {
 
     fun getDataSearch(searchUser: String) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().getUserSearch(searchUser, MainActivity.APICode)
+        val client = ApiConfig.getApiService().getUserSearch(searchUser, ApiConfig.APICode)
         client.enqueue(object : Callback<GitHubResponse> {
             override fun onResponse(
                 call: Call<GitHubResponse>,
@@ -61,7 +61,7 @@ class MainViewModel : ViewModel() {
 
     private fun getData() {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().getUsers(MainActivity.APICode)
+        val client = ApiConfig.getApiService().getUsers(ApiConfig.APICode)
         client.enqueue(object : Callback<List<GitHubUser>> {
             override fun onResponse(
                 call: Call<List<GitHubUser>>,

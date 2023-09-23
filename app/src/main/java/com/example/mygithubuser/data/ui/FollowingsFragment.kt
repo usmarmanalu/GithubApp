@@ -60,7 +60,6 @@ class FollowingsFragment : Fragment() {
                 override fun onItemClicked(data: GitHubUser) {
                     val detailViewModel =
                         ViewModelProvider(requireActivity())[DetailViewModel::class.java]
-
                     detailViewModel.userLogin = data.login.toString()
                 }
             })

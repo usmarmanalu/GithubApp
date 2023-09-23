@@ -45,7 +45,7 @@ class DetailViewModel : ViewModel() {
 
     private fun getDetailUser() {
         _isLoading.value = true
-        val api = ApiConfig.getApiService().getDetailUser(userLogin, MainActivity.APICode)
+        val api = ApiConfig.getApiService().getDetailUser(userLogin, ApiConfig.APICode)
         api.enqueue(object : Callback<DetailUser> {
             override fun onResponse(
                 call: Call<DetailUser>,
@@ -67,9 +67,9 @@ class DetailViewModel : ViewModel() {
         })
     }
 
-     private fun getDetailUserFollowers() {
+    private fun getDetailUserFollowers() {
         _isLoadingFollower.value = true
-        val api = ApiConfig.getApiService().getFollowers(userLogin, MainActivity.APICode)
+        val api = ApiConfig.getApiService().getFollowers(userLogin, ApiConfig.APICode)
         api.enqueue(object : Callback<ArrayList<GitHubUser>> {
             override fun onResponse(
                 call: Call<ArrayList<GitHubUser>>,
@@ -94,8 +94,8 @@ class DetailViewModel : ViewModel() {
 
     private fun getDetailUserFollowings() {
         _isLoadingFollowing.value = true
-        val api = ApiConfig.getApiService().getFollowings(userLogin, MainActivity.APICode)
-        api.enqueue(object :  Callback<ArrayList<GitHubUser>> {
+        val api = ApiConfig.getApiService().getFollowings(userLogin, ApiConfig.APICode)
+        api.enqueue(object : Callback<ArrayList<GitHubUser>> {
             override fun onResponse(
                 call: Call<ArrayList<GitHubUser>>,
                 response: Response<ArrayList<GitHubUser>>

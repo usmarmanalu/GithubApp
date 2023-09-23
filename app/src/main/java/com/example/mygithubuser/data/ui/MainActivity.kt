@@ -2,21 +2,16 @@ package com.example.mygithubuser.data.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mygithubuser.R
 import com.example.mygithubuser.data.response.GitHubUser
 import com.example.mygithubuser.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        const val APICode = "token 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"
-    }
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainViewModel: MainViewModel

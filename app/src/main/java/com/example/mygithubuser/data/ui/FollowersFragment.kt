@@ -1,11 +1,9 @@
 package com.example.mygithubuser.data.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -61,12 +59,9 @@ class FollowersFragment : Fragment() {
 
             listUserAdapter.setOnItemClickCallback(object : UserGitHubAdapter.OnItemClickCallback {
                 override fun onItemClicked(data: GitHubUser) {
-                    val intent = Intent(context, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.EXTRA_USER, data)
-                startActivity(intent)
-                activity?.finish()//                    val detailViewModel =
-//                        ViewModelProvider(requireActivity())[DetailViewModel::class.java]
-//                    detailViewModel.userLogin= data.login.toString()
+                    val detailViewModel =
+                        ViewModelProvider(requireActivity())[DetailViewModel::class.java]
+                    detailViewModel.userLogin = data.login.toString()
                 }
             })
         }
