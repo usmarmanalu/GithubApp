@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyGithubUser</string>
+    <string name="cari_users">cari users</string>
+    <string name="searchbar">cari users</string>
+    <string name="username">username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="username_github">username_github</string>
+    <string name="nama_pengguna">Nama Pengguna</string>
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+
+    <string name="tab_1">Followers</string>
+    <string name="tab_2">Following</string>
+
+    <string name="content_tab_text">This is Tab %1$d</string>
+    <string name="content_tab_followers">content_tab_followers</string>
+    <string name="content_tab_followings">content_tab_followings</string>
+
+</resources>
