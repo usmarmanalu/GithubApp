@@ -1,13 +1,13 @@
 package com.example.mygithubuser.data.retrofit
 
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
-    companion object{
+    companion object {
+        const val APICode = "token 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"
         fun getApiService(): ApiService {
             val loggingInterceptor =
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
